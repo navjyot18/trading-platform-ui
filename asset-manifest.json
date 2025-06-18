@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/navjyot18/trading-platform-ui/static/css/main.361a4a83.css",
+    "main.js": "/navjyot18/trading-platform-ui/static/js/main.50e01fd5.js",
+    "index.html": "/navjyot18/trading-platform-ui/index.html",
+    "main.361a4a83.css.map": "/navjyot18/trading-platform-ui/static/css/main.361a4a83.css.map",
+    "main.50e01fd5.js.map": "/navjyot18/trading-platform-ui/static/js/main.50e01fd5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.361a4a83.css",
+    "static/js/main.50e01fd5.js"
+  ]
+}
