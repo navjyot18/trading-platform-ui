@@ -14,23 +14,36 @@ const Header = () => {
   });
   return (
     <Container>
-      <div className="stock-header">
+      <div className="stock-header" role="region" aria-label="Stock header">
         <div className="d-flex" style={{ gap: 12 }}>
           <div className="team-logo">
             <img src={headerData.logo} alt={headerData.alt} width={'100%'} height={'100%'} />
           </div>
           <div className="stock-info">
-            <div className="title">{headerData.title}</div>
-            <div className="volume">{headerData.volume}</div>
+            <div className="title" aria-label="Stock title">
+              {headerData.title}
+            </div>
+            <div className="volume" aria-label="Stock volume">
+              {headerData.volume}
+            </div>
           </div>
         </div>
         <div className="d-flex">
-          <div className="price-change">
-            <div className="current-price">{headerData.currentPrice}</div>
-            <div className="change">{headerData.change}</div>
+          <div className="price-change" aria-label="Price change">
+            <div className="current-price" aria-label="Current price">
+              {headerData.currentPrice}
+            </div>
+            <div className="change" aria-label="Change">
+              {headerData.change}
+            </div>
           </div>
           <div className="">
-            <BarChart2 size={headerData.chartIcon.size} color={headerData.chartIcon.color} />
+            <BarChart2
+              size={headerData.chartIcon.size}
+              color={headerData.chartIcon.color}
+              aria-label="Chart"
+              role="img"
+            />
           </div>
         </div>
       </div>

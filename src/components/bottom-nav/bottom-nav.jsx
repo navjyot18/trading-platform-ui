@@ -24,30 +24,30 @@ export default function BottomNav() {
   const [navItems] = useState([
     {
       label: 'Markets',
-      icon: <LineChart size={24} color="#6b7280" />,
+      icon: <LineChart size={24} color="#6b7280" aria-label="Markets" role="img" />,
       active: false,
     },
     {
       label: 'Trade',
-      icon: <Zap size={24} color="#000000" />,
+      icon: <Zap size={24} color="#000000" aria-label="Trade" role="img" />,
       active: true,
     },
     {
       label: '$30.38',
-      icon: <CreditCard size={24} color="#6b7280" />,
+      icon: <CreditCard size={24} color="#6b7280" aria-label="Balance" role="img" />,
       active: false,
     },
     {
       label: 'More',
-      icon: <Menu size={24} color="#6b7280" />,
+      icon: <Menu size={24} color="#6b7280" aria-label="More" role="img" />,
       active: false,
     },
   ]);
 
   return (
-    <NavContainer>
+    <NavContainer role="navigation" aria-label="Bottom navigation">
       {navItems.map((item, idx) => (
-        <NavItem key={idx} active={item.active}>
+        <NavItem key={idx} active={item.active} tabIndex={0} aria-label={item.label} role="button">
           {item.icon}
           {item.label}
         </NavItem>

@@ -89,7 +89,7 @@ const PriceShare = () => {
   ];
 
   return (
-    <PriceShareContainer>
+    <PriceShareContainer role="region" aria-label="Price and Share List">
       <div className="price-share-container">
         <div className="price-share-list">
           <div className="d-flex price-share-header">

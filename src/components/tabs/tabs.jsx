@@ -4,7 +4,7 @@ export const Tabs = ({ tabs, selectedTab, onClick }) => {
   const [tabData] = useState(tabs);
   return (
     <TabsStyled>
-      <div className={`tabs`}>
+      <div className="tabs" role="tablist" aria-label="Tabs">
         {tabData.map((tab, index) => (
           <div
             key={index}
@@ -15,6 +15,10 @@ export const Tabs = ({ tabs, selectedTab, onClick }) => {
             style={{
               width: `${100 / tabData.length}%`,
             }}
+            role="tab"
+            aria-selected={selectedTab.label === tab.label}
+            tabIndex={selectedTab.label === tab.label ? 0 : -1}
+            aria-label={tab.label}
           >
             {tab.label}
           </div>
