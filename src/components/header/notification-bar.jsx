@@ -9,6 +9,7 @@ const NavBar = styled.div`
   padding: 16px;
   background-color: #fff;
   border-bottom: 1px solid #e5e7eb;
+  transition: background 0.3s, box-shadow 0.3s;
 `;
 
 const IconWrapper = styled.div`
@@ -16,6 +17,12 @@ const IconWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   color: #111827;
+  transition: color 0.3s, transform 0.2s;
+  &:hover,
+  &:focus {
+    color: #000;
+    transform: scale(1.1);
+  }
 `;
 
 export default function NotificationBar() {

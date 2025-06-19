@@ -18,6 +18,15 @@ const NavItem = styled.div`
   color: ${({ active }) => (active ? '#000000' : '#6b7280')};
   font-weight: ${({ active }) => (active ? '600' : '500')};
   font-size: 14px;
+  transition: color 0.3s, font-weight 0.3s, background 0.3s, box-shadow 0.3s, transform 0.2s;
+  border-radius: 8px;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    color: #000;
+    outline: none;
+    transform: translateY(-2px) scale(1.05);
+  }
 `;
 
 export default function BottomNav() {

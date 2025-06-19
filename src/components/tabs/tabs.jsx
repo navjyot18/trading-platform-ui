@@ -41,17 +41,18 @@ const TabsStyled = styled.div`
     border: 1px solid transparent;
     border-bottom: none;
     background-color: #f1f1f1;
-    transition: background-color 0.3s;
     font-family: IBM Plex Sans;
     font-weight: 600;
     font-size: 12px;
     line-height: 20px;
     text-align: center;
     vertical-align: middle;
+    border-radius: 4px;
   }
   .selected {
     background: rgba(43, 43, 43, 1);
     color: rgba(234, 234, 234, 1);
     border-radius: 4px;
+    transition: background 0.3s, color 0.3s;
   }
 `;

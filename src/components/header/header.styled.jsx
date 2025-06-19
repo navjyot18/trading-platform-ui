@@ -9,6 +9,7 @@ export const Container = styled.div`
     padding: 16px;
     background: white;
     border-bottom: 1px solid #ccc;
+    transition: background 0.3s, box-shadow 0.3s;
   }
 
   .nav-icon {
@@ -16,6 +17,7 @@ export const Container = styled.div`
     height: 24px;
     background: #333;
     clip-path: polygon(0 0, 100% 50%, 0 100%);
+    transition: background 0.3s;
   }
 
   .nav-right {
@@ -29,6 +31,12 @@ export const Container = styled.div`
     height: 24px;
     border: 2px solid #333;
     border-radius: 4px;
+    transition: border-color 0.3s, background 0.3s;
+    &:hover,
+    &:focus {
+      border-color: #ff9800;
+      background: #fffde7;
+    }
   }
   .stock-header {
     display: flex;
@@ -37,6 +45,7 @@ export const Container = styled.div`
     gap: 12px;
     padding: 16px;
     background: white;
+    transition: background 0.3s, box-shadow 0.3s;
   }
 
   .team-logo {
@@ -50,6 +59,11 @@ export const Container = styled.div`
     font-size: 12px;
     font-weight: bold;
     color: #333;
+    transition: background 0.3s, box-shadow 0.3s;
+    &:hover,
+    &:focus {
+      box-shadow: 0 2px 8px rgba(255, 235, 59, 0.2);
+    }
   }
 
   .stock-info .title {

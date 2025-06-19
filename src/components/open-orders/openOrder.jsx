@@ -64,7 +64,6 @@ const OpenOrder = () => {
                 aria-selected={tab.active}
                 tabIndex={tab.active ? 0 : -1}
                 aria-label={tab.label}
-                style={{ backgroundColor: tab.active ? '#f1f1f1' : undefined }}
               >
                 {tab.label}
               </AnimatedTab>
@@ -73,13 +72,7 @@ const OpenOrder = () => {
 
           <div className="order-controls">
             <label className="d-flex gap-2 info align-items-center" htmlFor="checkbox">
-              <input
-                type="checkbox"
-                id="checkbox"
-                checked={orderControls.hideOtherPairs}
-                aria-checked={orderControls.hideOtherPairs}
-              />{' '}
-              Hide Other Pairs
+              <input type="checkbox" id="checkbox" aria-checked={orderControls.hideOtherPairs} /> Hide Other Pairs
             </label>
             <AnimatedButton className="App-button" aria-label="Cancel all open orders">
               {orderControls.buttonLabel}
