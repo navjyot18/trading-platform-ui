@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Navigation, Star, Bell } from 'lucide-react';
 
@@ -19,19 +19,17 @@ const IconWrapper = styled.div`
 `;
 
 export default function NotificationBar() {
+  const [icons] = useState([
+    { component: <Navigation size={24} />, key: 'navigation' },
+    { component: <Star size={24} />, key: 'star' },
+    { component: <Bell size={24} />, key: 'bell' },
+  ]);
+
   return (
     <NavBar>
-      <IconWrapper>
-        <Navigation size={24} />
-      </IconWrapper>
-      <div className="d-flex align-items-center justify-content-center gap-2">
-        <IconWrapper>
-          <Star size={24} />
-        </IconWrapper>
-        <IconWrapper>
-          <Bell size={24} />
-        </IconWrapper>
-      </div>
+      {icons.map((icon) => (
+        <IconWrapper key={icon.key}>{icon.component}</IconWrapper>
+      ))}
     </NavBar>
   );
 }

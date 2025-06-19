@@ -1,6 +1,7 @@
+import { useState } from 'react';
 import { PriceShareContainer } from './priceShare.styled';
 const PriceShare = () => {
-  const priceSharesData = [
+  const [priceSharesData] = useState([
     {
       price: '38¢',
       shares: '14,984.00',
@@ -67,7 +68,7 @@ const PriceShare = () => {
       background: 'rgba(6, 169, 0, 0.1)',
       width: '100%',
     },
-  ];
+  ]);
   const getBackgroundStyle = (item) => {
     return {
       background: `linear-gradient(to right, ${item.background} ${item.width}, transparent ${0}%)`,

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { LineChart, Zap, CreditCard, Menu } from 'lucide-react';
 
@@ -21,24 +21,37 @@ const NavItem = styled.div`
 `;
 
 export default function BottomNav() {
+  const [navItems] = useState([
+    {
+      label: 'Markets',
+      icon: <LineChart size={24} color="#6b7280" />,
+      active: false,
+    },
+    {
+      label: 'Trade',
+      icon: <Zap size={24} color="#000000" />,
+      active: true,
+    },
+    {
+      label: '$30.38',
+      icon: <CreditCard size={24} color="#6b7280" />,
+      active: false,
+    },
+    {
+      label: 'More',
+      icon: <Menu size={24} color="#6b7280" />,
+      active: false,
+    },
+  ]);
+
   return (
     <NavContainer>
-      <NavItem>
-        <LineChart size={24} color="#6b7280" />
-        Markets
-      </NavItem>
-      <NavItem active>
-        <Zap size={24} color="#000000" />
-        Trade
-      </NavItem>
-      <NavItem>
-        <CreditCard size={24} color="#6b7280" />
-        $30.38
-      </NavItem>
-      <NavItem>
-        <Menu size={24} color="#6b7280" />
-        More
-      </NavItem>
+      {navItems.map((item, idx) => (
+        <NavItem key={idx} active={item.active}>
+          {item.icon}
+          {item.label}
+        </NavItem>
+      ))}
     </NavContainer>
   );
 }

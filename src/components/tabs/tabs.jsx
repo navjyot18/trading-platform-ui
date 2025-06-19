@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 export const Tabs = ({ tabs, selectedTab, onClick }) => {
+  const [tabData] = useState(tabs);
   return (
     <TabsStyled>
       <div className={`tabs`}>
-        {tabs.map((tab, index) => (
+        {tabData.map((tab, index) => (
           <div
             key={index}
             className={`tab ${selectedTab.label === tab.label ? 'selected' : ''}`}
@@ -12,7 +13,7 @@ export const Tabs = ({ tabs, selectedTab, onClick }) => {
               onClick(tab);
             }}
             style={{
-              width: `${100 / tabs.length}%`,
+              width: `${100 / tabData.length}%`,
             }}
           >
             {tab.label}
