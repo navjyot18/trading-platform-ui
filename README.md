@@ -38,3 +38,9 @@ The design and layout were prioritized to quickly build and iterate over the use
 🛠️ **Minimal external dependencies**  
 Only essential packages are used to keep the stack lightweight, reduce bundle size, and simplify debugging.
 
+♿ **Accessibility (a11y) considerations**  
+UI components follow basic accessibility best practices like semantic HTML, keyboard navigation support, and readable color contrast.
+
+📱 **PWA-ready foundation**  
+Built with Progressive Web App compatibility in mind — supports offline access, responsive design, and can be easily enhanced with service workers and manifest configuration.
+
